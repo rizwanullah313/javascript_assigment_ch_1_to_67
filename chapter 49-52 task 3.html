@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<style type="text/css">
+body
+{
+	background-color:#0FF;
+}
+
+.name
+{
+  height:100%;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+.header {
+  background-color: #f44336;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+.btn
+{
+  margin-left:10px;
+  margin-right:20px;
+  background: #000;
+  color: #FFF;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+#list
+{
+	background-color:#000;
+	color:#FFF;
+	font-size: 16px;
+	border-bottom: 2px solid #16a085;
+	border-color:#FFF;
+	border-bottom-color:#CCC;
+}
+li
+{
+	border-bottom: 2px solid #16a085;
+	border-color:#FFF;
+	padding:10px;
+}
+h1,h3
+{
+	color:#000;
+}
+</style>
+</head>
+
+<body>
+
+<center>
+<div class="header">
+<h1>Rizwan Ullah</h1>
+<h3>rizwanullahtiger313@gmail.com</h3>
+<input type="text" placeholder="Enter name" id="todo-item" name="todo-item" class="name"/>
+<br /><br />
+<input type="email" placeholder="Enter email" id="todo-item1" name="todo-item1" class="name" id="name1" />
+<br /><br />
+<input type="number" placeholder="Enter phoneno" id="todo-item2" name="todo-item2" class="name" id="name2" />
+<br /><br />
+<button onclick="addTodo()" class="btn1">ADD ITEM</button>
+</div>
+
+<div>
+<ol id="list" >
+
+</ol>
+</div>
+</center>
+<script>
+// JavaScript Document
+// Rizwan Ullah
+
+var list = document.getElementById("list");
+function addTodo()
+{
+	var todo_item = document.getElementById("todo-item");
+	var todo_item1 = document.getElementById("todo-item1");
+	var todo_item2 = document.getElementById("todo-item2");
+	// create li withy text node
+	var li = document.createElement('li')
+	var liText = document.createTextNode(todo_item.value)
+	var liText1 = document.createTextNode(todo_item1.value)
+	var liText2 = document.createTextNode(todo_item2.value)
+	li.appendChild(liText)
+	li.appendChild(liText1)
+	li.appendChild(liText2)
+	// create delete button
+	var delBtn = document.createElement("button")
+	var delText = document.createTextNode("DELETE")
+	delBtn.setAttribute("class","btn")
+	delBtn.setAttribute("onclick","deleteItem(this)")
+	delBtn.appendChild(delText)
+	
+	li.appendChild(delBtn)
+	
+	//create edit button
+	var editBtn = document.createElement("button")
+	var editText = document.createTextNode("EDIT")
+	editBtn.setAttribute("class","btn")
+	editBtn.appendChild(editText)
+	editBtn.setAttribute("onclick","editItem(this)")
+	
+	
+	li.appendChild(editBtn)
+	list.appendChild(li)
+	todo_item.value = ""
+}
+function deleteItem(e)
+{
+	e.parentNode.remove()
+}
+function editItem(e)
+{
+	var val = prompt("Enter Updated value",e.parentNode.firstChild.nodeValue)
+	e.parentNode.firstChild.nodeValue = val
+}
+
+</script>
+</body>
+</html>

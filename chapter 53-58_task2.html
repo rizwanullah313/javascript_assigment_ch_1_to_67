@@ -1,0 +1,61 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        body
+        {
+            font-family: Arial;
+            font-size: 16px;
+        }
+        .font-button
+        {
+            background-color: #FF0000;
+            height: 50px;
+            width: 50px;
+            display: inline-block;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            font-size: 25pt;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <b><h1>Rizwan Ullah</h1></b>
+    <hr />
+    <div id = "content">
+       We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.
+        <br />
+        I completed my graduation from Mumbai University with Bachelor’s Degree in Computer
+        Engineering.
+        <br />
+       We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.
+        <br />
+        I also wrote articles on SQLServerCentral and ASPAlliance as a guest columnist.
+        I started this site to answer all the questions that are most frequently asked on
+        the asp.net forums.
+        <br />
+        We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.
+    </div>
+    <hr />
+    <a class="font-button plus">A+</a> <a class="font-button minus">A-</a>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".font-button").bind("click", function () {
+                var size = parseInt($('#content').css("font-size"));
+                if ($(this).hasClass("plus")) {
+                    size = size + 2;
+                } else {
+                    size = size - 2;
+                    if (size <= 10) {
+                        size = 10;
+                    }
+                }
+                $('#content').css("font-size", size);
+            });
+        });
+    </script>
+</body>
+</html>

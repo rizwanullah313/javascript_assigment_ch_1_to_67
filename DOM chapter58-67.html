@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<center>
+<div class="header">
+<h1>Rizwan Ullah</h1>
+<h3>rizwanullahtiger313@gmail.com</h3>
+<label for="first-name">First Name</label> 
+<input type="text" id="firstname" /> 
+
+<label for="last-name">Last Name</label>
+ <input type="text" id="lastname" /> 
+
+<label for="email">Email</label>
+ <input type="text" id="email" /> 
+
+
+<button onclick="addTodo()" class="btn1">ADD ITEM</button>
+</div>
+
+<div>
+<p id="list" >
+
+</p>
+</div>
+</center>
+<script>
+
+
+
+var list = document.getElementById("list");
+function addTodo()
+{
+	var todo_item = document.getElementById("firstname");
+	var todo_item1 = document.getElementById("lastname");
+	var todo_item2 = document.getElementById("email");
+	
+	// create li withy text node
+	var li = document.createElement('p')
+	var liText = document.createTextNode(todo_item.value)
+	li.appendChild(liText)
+
+    var li1 = document.createElement('p')
+	var liText = document.createTextNode(todo_item1.value)
+	li1.appendChild(liText)
+
+    var li2 = document.createElement('p')
+	var liText = document.createTextNode(todo_item2.value)
+	li2.appendChild(liText)
+
+	list.appendChild(li)
+	list.appendChild(li1)
+	list.appendChild(li2)
+	todo_item.value = ""
+	todo_item.value1 = ""
+	todo_item.value2 = ""
+}
+
+
+</script>
+</body>
+</html>
