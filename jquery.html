@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+       JQuery | Basics And Events
+        </title>
+        <script src="js/jquery-3.1.0.min.js"></script>
+    </head>
+
+    <body>
+    <p class="para">This is a paragraph</p>
+    <p>this is another paragraph</p>
+    <button id="cli">Click</button>
+
+<br><br>
+
+    <form id="myform">
+        <input type="text" placeholder="Enter Your Name" required><br><br>
+
+        <input type="email" placeholder="Enter Your Email" required><br><br>
+
+        <input type="number" placeholder="Enter your Phone Number" required><br><br>
+
+    </form>
+    <div id="output"></div>
+    <script>
+        $(document).ready(function()
+        {
+         // alert(1);
+         //$('p.para').hide();
+
+         /*$('#cli').dblclick(function()
+         {
+            alert("You are clicked")
+            $('p.para').hide();
+         });
+         */
+
+         $('#myform input').keydown(function()
+         {
+        $('#output').text('you are typing....');
+        $(this).keyup(function()
+        {
+         $('output').text('');
+        });
+         });
+        });
+
+
+    </script>
+    </body>
+</html>
