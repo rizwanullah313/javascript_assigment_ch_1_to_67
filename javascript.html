@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+      Javascript & Variable Arrays And Objects
+        </title>
+    </head>
+    <body>
+<div id="test"></div>
+<script>
+      // OUtput
+     //console.log("Hello Rizwan");
+    // document.write("Hello rizwan");
+   // alert("Hello Rizwan");
+  //document.getElementById("test").innerHTML="Hello Rizwan";
+
+  var animals = ["dog", "Cat", "horse"];
+  //console.log(animals[1]);
+  animals[0]="tiger";
+  animals[3]="cow";
+  animals.push("pig");
+// console.log(animals);
+// console.log(animals.sort());
+
+var car = {make:'ford', model:'mustang', year:'1996'};
+// console.log(car);
+
+var car = [
+    {make:'ford', 
+    model:'mustang', 
+    year:'1996'
+    },
+    {make:'ford', 
+    model:'tiger', 
+    year:'1934'
+    },
+    {make:'suzukik', 
+    model:'mustang', 
+    year:'1978'
+    }
+    ];
+    // console.log(car);
+
+    for(i=0; i<=10; i++)
+    {
+       // console.log(i);
+    }
+
+    var i =0;
+    while(i<10){
+        // console.log(i);
+        i++;
+    }
+
+    var people = ['hairs', 'Rizwan', 'Shaan'];
+    for (i=0; i<people.length; i++)
+    {
+      //  console.log(people[i]);
+    }
+    var people = [
+        {
+            name:'hairs',
+            age:'22'},
+            {
+            name:'Rizwan',
+            age:'23'},
+            {
+             name:'Shaan',
+             age:'25'
+        }];
+
+        for (i=0; i<people.length; i++)
+    {
+     //  console.log(people[i].age);
+    // document.getElementById('test').innerHTML += '<li>' + people[i].name + '</li>' + ' - ' + '<li>' + people[i].age + '</li>';
+    }
+</script>
+    </body>
+</html>
